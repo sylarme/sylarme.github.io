@@ -86,7 +86,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -416,6 +416,25 @@
 
 
 
+<!--    确保仅在允许评论的页面加载 -->
+  <div id="gitalk-container"></div>
+  <script>
+    const gitalk = new Gitalk({
+  id: '2025/03/20/Linux常用命令整理/',  // 或使用 'https://sylarme.github.io/2025/03/20/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/'
+  clientID: 'Ov23lic5s5fRr8gFO2OP',
+  clientSecret: '2a60cc4bbdbcffc708a06673679e7b7d0f116af2',
+  repo: 'blog-comments',
+  owner: 'sylarme',
+  admin: ['sylarme'],
+  distractionFreeMode: false
+});
+    gitalk.render('gitalk-container');
+  </script>
+<script>
+  console.log('Page Path:', '2025/03/20/Linux常用命令整理/');
+  console.log('Page Title:', 'Linux常用命令整理');
+</script>
+<!--  -->
 
     
 
