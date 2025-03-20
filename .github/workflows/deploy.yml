@@ -1,8 +1,13 @@
 jobs:
-  build-deploy:
+  deploy:
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: '18' }
-      - run: npm install
-      - run: hexo clean && hexo deploy
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # 关键配置
+          fetch-depth: 0        # 拉取完整提交历史
+
+      - name: Install dependencies
+        run: |
+          npm install
+          git submodule update --init --recursive  # 显式初始化子模块
